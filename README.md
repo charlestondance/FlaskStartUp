@@ -22,4 +22,8 @@ user = User(email="xxxxx@gmail.com", username="dmcclymo", password="xxxx")
 db.session.add(user)
 db.session.commit()
 
+Set up alembic:
+$ python app.py db init 
+$ python app.py db migrate 
+
 Based on the Book Flask Web Development By Miguel Grinberg
