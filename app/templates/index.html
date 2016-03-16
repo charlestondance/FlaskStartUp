@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+</div>
+<P>
+
+
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('auth.testing') }}">Testing</a></li>
+                {% endif %}
+
+    </p>
+
+
+<p>
+                {% if current_user.can(Permission.EDIT_DB) %}
+                <h2>Admin Tasks</h2>
+                <li><a href="{{ url_for('auth.delete_user') }}">Delete User</a></li>
+                <li><a href="{{ url_for('auth.user_management') }}">List Users</a></li>
+                <li><a href="{{ url_for('auth.register') }}">Register New User</a></li>
+                {% endif %}
+</P>
+{% endblock %}
