@@ -1,5 +1,5 @@
 # FlaskStartUp
-Base Flask Set-Up for Synthetic Biology Start-ups
+
 
 This allows start up companies to create their own web app based custom intranet software.
 
